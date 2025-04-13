@@ -1,0 +1,570 @@
+/* Стилі для сторінок панелі користувача */
+
+.dashboard {
+  min-height: calc(100vh - 200px);
+  padding: var(--spacing-lg) 0;
+}
+
+/* Заголовок */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-title h1 {
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: var(--font-size-xxl);
+  color: var(--color-text);
+}
+
+.user-greeting {
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* Інформаційні картки */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.info-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+}
+
+.info-card-icon.blue {
+  background-color: rgba(74, 144, 226, 0.1);
+  color: var(--color-primary);
+}
+
+.info-card-icon.green {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--color-success);
+}
+
+.info-card-icon.yellow {
+  background-color: rgba(255, 160, 0, 0.1);
+  color: var(--color-warning);
+}
+
+.info-card-icon.red {
+  background-color: rgba(211, 47, 47, 0.1);
+  color: var(--color-danger);
+}
+
+.info-card-content h3 {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.info-card-content p {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+/* Прогрес пожертв */
+.donation-progress {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.progress-info h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background-color: var(--color-primary);
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+/* Вкладки Dashboard */
+.dashboard-tabs {
+  display: flex;
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+  position: relative;
+}
+
+.tab-btn.active {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.notification-badge {
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  margin-left: calc(var(--spacing-xs) / 2);
+}
+
+/* Опції фільтрування */
+.filter-options {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.filter-options select {
+  padding: var(--spacing-xs) var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  border: 1px solid #e0e0e0;
+}
+
+/* Таблиця тварин */
+.animals-table {
+  overflow-x: auto;
+}
+
+.animals-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.animals-table th,
+.animals-table td {
+  padding: var(--spacing-sm);
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.animals-table th {
+  background-color: var(--color-light-bg);
+  font-weight: 500;
+}
+
+.animal-thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.animal-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: calc(var(--spacing-xs) / 2) var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.status-badge.available {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.reserved {
+  background-color: #fff8e1;
+  color: var(--color-warning);
+}
+
+.status-badge.adopted {
+  background-color: #e8f5e9;
+  color: var(--color-success);
+}
+
+.status-badge.pending {
+  background-color: #fff8e1;
+  color: var(--color-warning);
+}
+
+.status-badge.approved {
+  background-color: #e8f5e9;
+  color: var(--color-success);
+}
+
+.status-badge.rejected {
+  background-color: #ffebee;
+  color: var(--color-danger);
+}
+
+.action-buttons {
+  display: flex;
+  gap: calc(var(--spacing-xs) / 2);
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.status-select {
+  padding: calc(var(--spacing-xs) / 2);
+  border-radius: var(--radius-sm);
+  border: 1px solid #e0e0e0;
+  font-size: var(--font-size-sm);
+}
+
+/* Контейнер запитів */
+.requests-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.request-card {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.request-card.pending {
+  border-left: 4px solid var(--color-warning);
+}
+
+.request-card.approved {
+  border-left: 4px solid var(--color-success);
+}
+
+.request-card.rejected {
+  border-left: 4px solid var(--color-danger);
+}
+
+.request-info h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: var(--font-size-lg);
+}
+
+.request-meta {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.request-message {
+  color: var(--color-text);
+}
+
+.request-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.request-date {
+  color: var(--color-text-lighter);
+  font-size: var(--font-size-sm);
+}
+
+.request-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+/* Секція улюблених */
+.favorites-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.favorites-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.favorite-card {
+  display: flex;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  background-color: white;
+}
+
+.favorite-image {
+  width: 100px;
+  min-width: 100px;
+  position: relative;
+}
+
+.favorite-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-favorite-btn {
+  position: absolute;
+  top: var(--spacing-xs);
+  right: var(--spacing-xs);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: all 0.3s;
+}
+
+.remove-favorite-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
+
+.favorite-details {
+  padding: var(--spacing-sm);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.favorite-details h4 {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.favorite-type {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.favorite-shelter {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.favorite-date {
+  color: var(--color-text-lighter);
+  font-size: var(--font-size-sm);
+  margin: 0 0 auto 0;
+}
+
+.favorite-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+}
+
+/* Список запитів */
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.request-status-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.request-instructions {
+  background-color: #e3f2fd;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.request-instructions p {
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+/* Сітка адоптованих тварин */
+.adopted-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.adopted-card {
+  display: flex;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  background-color: white;
+}
+
+.adopted-image {
+  width: 40%;
+  height: 220px;
+}
+
+.adopted-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adopted-details {
+  padding: var(--spacing-sm);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.adopted-details h4 {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.adopted-type {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.adopted-shelter {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.adopted-date {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  margin: 0 0 auto 0;
+  font-weight: 500;
+}
+
+.adopted-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+/* Стан пустої секції */
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  background-color: var(--color-light-bg);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-md);
+}
+
+.empty-state p {
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-text-light);
+}
+
+/* Заголовки секцій */
+.favorites-container h3,
+.requests-section h3,
+.adopted-section h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .dashboard-actions {
+    margin-top: var(--spacing-sm);
+  }
+  
+  .request-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .request-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}

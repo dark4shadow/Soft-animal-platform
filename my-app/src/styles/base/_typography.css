@@ -1,0 +1,46 @@
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: calc(var(--font-size-xl) + 0.2rem);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 0.7rem;
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--color-text-light);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}

@@ -1,0 +1,84 @@
+/* Стилі для сторінки запиту на усиновлення */
+
+.adoption-animal-info {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.adoption-animal-info .animal-image {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.adoption-animal-info .animal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adoption-animal-info .animal-details {
+  flex-grow: 1;
+}
+
+.adoption-animal-info h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.adoption-animal-info .animal-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.adoption-animal-info .animal-meta {
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.adoption-form h3 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--color-text);
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .adoption-animal-info {
+    flex-direction: column;
+  }
+  
+  .adoption-animal-info .animal-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+}

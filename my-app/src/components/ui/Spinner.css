@@ -1,0 +1,103 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.spinner {
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border-top: 3px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+.spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-primary, #4a90e2);
+  border-radius: 100%;
+  display: inline-block;
+  margin: 0 3px;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.spinner.small > div {
+  width: 8px;
+  height: 8px;
+}
+
+.spinner.medium > div {
+  width: 12px;
+  height: 12px;
+}
+
+.spinner.large > div {
+  width: 16px;
+  height: 16px;
+}
+
+.spinner-small {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.spinner-medium {
+  width: 30px;
+  height: 30px;
+  border-width: 3px;
+}
+
+.spinner-large {
+  width: 50px;
+  height: 50px;
+  border-width: 4px;
+}
+
+.spinner-primary {
+  border: 3px solid rgba(74, 144, 226, 0.2);
+  border-top-color: #4a90e2;
+}
+
+.spinner-secondary {
+  border: 3px solid rgba(108, 117, 125, 0.2);
+  border-top-color: #6c757d;
+}
+
+.spinner-success {
+  border: 3px solid rgba(76, 175, 80, 0.2);
+  border-top-color: #4CAF50;
+}
+
+.spinner-danger {
+  border: 3px solid rgba(244, 67, 54, 0.2);
+  border-top-color: #F44336;
+}
+
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { 
+    transform: scale(0);
+  } 
+  40% { 
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

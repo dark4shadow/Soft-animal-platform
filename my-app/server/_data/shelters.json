@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Котячий дім",
+    "type": "cat",
+    "address": "вул. Шевченка, 45, Київ",
+    "location": "Київ",
+    "phone": "+380991234567",
+    "email": "cat.home@example.com",
+    "description": "Притулок для котів та кошенят, що потребують домівки",
+    "fullDescription": "Притулок 'Котячий дім' був заснований у 2018 році групою волонтерів, які не могли залишатися байдужими до проблеми безпритульних котів у Києві. З маленького приміщення на околиці міста ми виросли до повноцінного центру з просторими вольєрами, ветеринарним кабінетом і командою відданих працівників.",
+    "workingHours": "Пн-Пт: 10:00-18:00, Сб-Нд: 10:00-16:00",
+    "image": "https://images.unsplash.com/photo-1570824104453-508955ab713e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    ],
+    "animalsCount": 32,
+    "capacity": 50,
+    "foundedYear": 2018,
+    "teamSize": 12,
+    "rating": 4.8,
+    "reviewsCount": 124,
+    "verified": true,
+    "needsHelp": ["Корм", "Ліки", "Наповнювач для лотків"],
+    "donationGoal": 15000,
+    "donationCurrent": 8750,
+    "socialMedia": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com"
+    }
+  },
+  {
+    "name": "Пухнастий друг",
+    "type": "dog",
+    "address": "вул. Франка, 12, Львів",
+    "location": "Львів",
+    "phone": "+380671234567",
+    "email": "fluffy.friend@example.com",
+    "description": "Притулок для собак усіх порід та віку. Тут ваш майбутній найкращий друг чекає на вас.",
+    "fullDescription": "Притулок 'Пухнастий друг' був заснований у 2015 році з метою вирішення проблеми бездомних собак у Львові та околицях. За цей час ми врятували, реабілітували та знайшли нові домівки для більш ніж 1200 собак різних порід і віку.",
+    "workingHours": "Пн-Пт: 11:00-19:00, Сб-Нд: 10:00-17:00",
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1534361960057-19889db9621e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    ],
+    "animalsCount": 45,
+    "capacity": 60,
+    "foundedYear": 2015,
+    "teamSize": 15,
+    "rating": 4.9,
+    "reviewsCount": 210,
+    "verified": true,
+    "needsHelp": ["Корм для собак", "Ліки", "Підстилки"],
+    "donationGoal": 25000,
+    "donationCurrent": 16800,
+    "socialMedia": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com"
+    }
+  }
+]

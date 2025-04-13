@@ -1,0 +1,681 @@
+/* Стилі для сторінки пожертвувань */
+
+.donate-page {
+  min-height: calc(100vh - 200px);
+  padding-bottom: 80px;
+}
+
+.donate-page.loading-state {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Верхня секція */
+.donate-hero {
+  padding: var(--spacing-xl) var(--spacing-md);
+  color: white;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.donate-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)); /* Темніший градієнт */
+  z-index: 1;
+}
+
+.donate-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.donate-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8); /* Посилюю тінь */
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.donate-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.8); /* Посилюю тінь */
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Форма пожертви */
+.donate-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.donate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.donate-form-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.donate-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.donate-tab {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid #ddd;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+  min-width: 150px;
+}
+
+.donate-tab.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.donate-tab span {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin-top: calc(var(--spacing-xs) / 2);
+}
+
+.donate-tab.active span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.donate-form {
+  background-color: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.donate-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--color-primary);
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.donate-amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.amount-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.amount-btn {
+  background-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.amount-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.amount-btn.selected {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.custom-amount {
+  margin-top: 20px;
+}
+
+.custom-amount label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.custom-amount input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.custom-amount-input {
+  margin-top: 15px;
+  position: relative;
+}
+
+.custom-amount-input input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.custom-amount-input .currency {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.donation-frequency {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm) 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.frequency-option {
+  display: flex;
+  align-items: center;
+}
+
+.frequency-option input {
+  margin-right: calc(var(--spacing-xs) / 2);
+}
+
+.donation-target {
+  margin-bottom: 20px;
+}
+
+.target-radio {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.target-radio input[type="radio"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.target-radio label {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.donation-details {
+  border-top: 1px solid #eee;
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.donation-details h3 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-lg);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: var(--spacing-sm);
+  overflow: hidden;
+}
+
+.progress-fill {
+  background-color: var(--color-primary);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.payment-method {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.payment-method input[type="radio"] {
+  display: none;
+}
+
+.payment-method label {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.payment-method input[type="radio"]:checked + label {
+  background-color: rgba(74, 144, 226, 0.1);
+  border-left: 4px solid var(--color-primary);
+}
+
+.payment-icon {
+  font-size: 1.8rem;
+  margin-right: 15px;
+}
+
+.payment-method label div:last-child {
+  flex-grow: 1;
+}
+
+.payment-method label p {
+  margin: 5px 0 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.personal-info {
+  background-color: var(--color-light-bg);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-md);
+}
+
+.personal-info h3 {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.personal-info p {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.donate-btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  margin-top: var(--spacing-xs);
+  width: 100%;
+}
+
+.donate-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.secure-payment {
+  text-align: center;
+  margin-top: var(--spacing-xs);
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+/* Кнопки дій */
+.form-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-donate {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.btn-donate:hover {
+  background-color: #3a7ac8;
+}
+
+.btn-donate:disabled {
+  background-color: #84aee2;
+  cursor: not-allowed;
+}
+
+.btn-donate .spinner {
+  margin-right: 10px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Статистика пожертв */
+.donation-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.stats-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stats-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* Інформація про розподіл коштів */
+.donation-info {
+  margin-top: 50px;
+}
+
+.donation-info h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.info-block {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.info-block h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.info-block p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.info-block ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.info-block ul li {
+  margin-bottom: 8px;
+}
+
+.info-block.transparency {
+  background-color: rgba(74, 144, 226, 0.05);
+  border-left: 4px solid var(--color-primary);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .donate-hero {
+    padding: 60px 20px;
+  }
+  
+  .donate-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .amount-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .payment-methods {
+    grid-template-columns: 1fr;
+  }
+  
+  .donation-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md) var(--spacing-sm);
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .donate-tabs {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .donate-hero {
+    padding: 40px 15px;
+  }
+  
+  .donate-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .donate-form-container {
+    padding: 20px 15px;
+  }
+  
+  .btn-donate {
+    width: 100%;
+  }
+}
+
+/* Варіанти допомоги */
+.help-options-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-light-bg);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.section-header h2 {
+  font-size: var(--font-size-xl);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.section-header p {
+  color: var(--color-text-light);
+}
+
+.help-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 992px) {
+  .help-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .help-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.help-option {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.help-option:hover {
+  transform: translateY(-5px);
+}
+
+.help-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.help-option h3 {
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+}
+
+.help-option p {
+  color: var(--color-text-light);
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.5;
+}
+
+/* Додайте ці стилі до існуючого файлу */
+
+.processing-payment {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.processing-payment h2 {
+  margin: 20px 0 10px;
+  color: var(--color-primary);
+}
+
+.processing-payment p {
+  color: #666;
+  margin-bottom: 30px;
+}

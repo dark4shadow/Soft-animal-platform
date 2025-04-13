@@ -1,0 +1,29 @@
+/* Базові стилі */
+@import './base/_reset.css';
+@import './base/_variables.css';
+@import './base/_typography.css';
+
+/* Компоненти */
+@import './components/_buttons.css';
+@import './components/_cards.css';
+@import './components/_forms.css';
+@import './components/_animal-cards.css';
+@import './components/_shelter-cards.css';
+@import './components/_shelter-tabs.css';
+
+/* Макети */
+@import './layout/_grid.css';
+@import './layout/_header.css';
+@import './layout/_footer.css';
+
+/* Сторінки */
+@import './pages/HomePage.css';
+@import './pages/AnimalListings.css';
+@import './pages/SheltersPage.css';
+@import './pages/ShelterDetail.css';
+@import './pages/BlogPage.css';
+@import './pages/BlogPostDetail.css';
+@import './pages/DonatePage.css';
+@import './pages/Auth.css';
+@import './pages/Dashboard.css';
+@import './pages/_adoption.css';

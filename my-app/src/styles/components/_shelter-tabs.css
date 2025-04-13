@@ -1,0 +1,297 @@
+/* Компоненти для вкладок на сторінці притулку */
+
+/* About Tab */
+.shelter-description {
+  margin-bottom: var(--spacing-lg);
+}
+
+.shelter-description h2 {
+  margin-top: 0;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.shelter-description p {
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.shelter-description ul {
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.shelter-description li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.5;
+}
+
+.shelter-info-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.info-block {
+  background-color: var(--color-light-bg);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.info-block h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.contact-item {
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+}
+
+.contact-item .icon {
+  margin-right: var(--spacing-xs);
+  font-size: var(--font-size-lg);
+}
+
+.needs-list {
+  padding-left: var(--spacing-md);
+  margin: 0;
+}
+
+.needs-list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Animals Tab */
+.animals-tab h2 {
+  margin-top: 0;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.filter-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: all 0.3s;
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Team Tab */
+.team-tab h2 {
+  margin-top: 0;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.team-member {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  font-size: var(--font-size-lg);
+}
+
+.member-position {
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Reviews Tab */
+.reviews-tab h2 {
+  margin-top: 0;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.review-card {
+  background-color: var(--color-light-bg);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.reviewer-info h3 {
+  margin: 0 0 calc(var(--spacing-xs) / 2) 0;
+  font-size: var(--font-size-lg);
+}
+
+.review-date {
+  color: var(--color-text-lighter);
+  font-size: var(--font-size-sm);
+}
+
+.review-rating {
+  font-size: var(--font-size-lg);
+}
+
+.star {
+  color: #ddd;
+}
+
+.star.filled {
+  color: #FFC107;
+}
+
+.review-text {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.write-review {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.write-review h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.rating-input {
+  font-size: var(--font-size-xxl);
+  display: flex;
+  gap: calc(var(--spacing-xs) / 2);
+}
+
+.rating-input .star {
+  cursor: pointer;
+}
+
+.rating-input .star:hover {
+  color: #FFC107;
+}
+
+/* Gallery Tab */
+.gallery-tab h2 {
+  margin-top: 0;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.gallery-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.active-image {
+  width: 100%;
+  height: 500px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.active-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.thumbnail.active {
+  opacity: 1;
+  box-shadow: 0 0 0 3px var(--color-primary);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 992px) {
+  .active-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
